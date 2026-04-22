@@ -1,6 +1,8 @@
 import { config } from 'dotenv'
 import { DataSource } from 'typeorm'
 
+import { Division } from './division/division.entity'
+
 config()
 
 export const AppDataSource = new DataSource({
@@ -10,6 +12,6 @@ export const AppDataSource = new DataSource({
   username: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
-  entities: [__dirname + '/entities/*.ts'],
+  entities: [Division],
   migrations: [__dirname + '/migrations/*.ts']
 })
