@@ -1,8 +1,12 @@
 import { Module } from '@nestjs/common'
+import { TypeOrmModule } from '@nestjs/typeorm'
+
+import { Division } from './division.entity'
 import { DivisionService } from './division.service'
 import { DivisionController } from './division.controller'
 
 @Module({
+  imports: [TypeOrmModule.forFeature([Division])],
   controllers: [DivisionController],
   providers: [DivisionService]
 })
