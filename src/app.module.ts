@@ -4,7 +4,7 @@ import { TypeOrmModule } from '@nestjs/typeorm'
 
 import { AppController } from './app.controller'
 import { AppService } from './app.service'
-import { DivisionModule } from './division/division.module';
+import { DivisionModule } from './division/division.module'
 
 @Module({
   imports: [
